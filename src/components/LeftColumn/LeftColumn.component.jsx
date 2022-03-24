@@ -8,14 +8,14 @@ import homeIcon from "../../assets/icons/home.svg";
 import searchIcon from "../../assets/icons/search.svg";
 import albumsIcon from "../../assets/icons/albums.svg";
 import artistsIcon from "../../assets/icons/artists.svg";
+import addIcon from "../../assets/icons/add.svg";
+
 
 function LeftColumn() {
   const [activeId, setActiveId] = useState(0);
   let value = 0;
 
-  useEffect(() => {
-    console.log(activeId);
-  }, [activeId]);
+  useEffect(() => {}, [activeId]);
 
   const values = [
     {
@@ -54,7 +54,6 @@ function LeftColumn() {
 
         <ul className={classes.links}>
           {values.map((value) => {
-            console.log(activeId === value.id);
             return (
               <li
                 key={value.id}

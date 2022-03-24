@@ -7,3 +7,9 @@
   margin-left: 0.3rem;
   width: 100%;
 }
+
+.search-input input:active,
+.search-input input:focus {
+  border: 1px solid #4914ff;
+  box-shadow: 1px 1px 5px #4b14ff4d;
+}

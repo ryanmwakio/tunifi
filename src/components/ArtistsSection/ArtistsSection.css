@@ -1,0 +1,23 @@
+.artists-section-title {
+  @apply text-primarydarkblue;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.artists-section-wrapper {
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+}
+
+.artist-section-detail {
+  @apply object-cover bg-center;
+  min-width: 85px;
+  min-height: 85px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 1.5rem;
+  overflow: hidden;
+}
