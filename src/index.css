@@ -10,6 +10,38 @@
   outline: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(212, 212, 212);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(155, 155, 155);
+}
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
 html,
 body {
   @apply bg-white;
@@ -20,6 +52,6 @@ body {
 
 .container {
   @apply max-w-screen-2xl;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }

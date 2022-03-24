@@ -1,0 +1,6 @@
+.wrapper {
+  width: 95%;
+  margin: 2rem auto;
+  height: 90vh;
+  overflow: scroll;
+}

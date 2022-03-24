@@ -1,12 +1,23 @@
+import Helmet from "react-helmet";
+import { React } from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home/Home.page";
+import logoImg from "./assets/images/logo-img.png";
+import Error from "./pages/Error/Error.page";
+
 function App() {
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>My Title</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="shortcut icon" href={logoImg} type="image/x-icon" />
+        <title>tunifi | music that moves</title>
       </Helmet>
-      <div className="container bg-gray-500 p-5"></div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
     </>
   );
 }

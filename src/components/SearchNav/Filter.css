@@ -1,0 +1,22 @@
+.filter-icon {
+  width: 100%;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.2rem 0.25rem;
+}
+
+.filter-icon:hover,
+.filter-icon:active,
+.filter-icon:focus {
+  background: rgb(243, 241, 241);
+}
+
+.filter-icon img {
+  width: 1rem;
+}

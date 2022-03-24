@@ -1,0 +1,132 @@
+.wrapper {
+  width: 95%;
+  margin: 2rem auto;
+  height: 90vh;
+  overflow: scroll;
+}
+
+.brand img {
+  width: 2rem;
+  display: inline;
+}
+
+.brand span {
+  @apply text-primaryblue;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.links {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.links .title {
+  font-size: 0.8rem;
+  color: #11004d6e;
+  font-weight: 600;
+}
+
+.links li {
+  @apply pl-5 py-2;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.linkItem {
+  @apply pl-5 py-2;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.links li:hover,
+.links li:active,
+.links li:focus {
+  @apply bg-primaryblue;
+}
+.linkItem:hover,
+.linkItem:active,
+.linkItem:focus {
+  @apply bg-primaryblue;
+}
+
+.linkItemActive {
+  @apply bg-primaryblue;
+}
+
+.linkItemActive a {
+  color: #fff;
+}
+
+.links img {
+  display: inline;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.links svg {
+  display: inline;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.links span {
+  @apply text-primarydarkblue;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.links span:hover,
+.links span:active,
+.links span:focus {
+  @apply bg-primaryblue;
+}
+
+.activeLink {
+  @apply bg-primaryblue text-white;
+}
+
+.btnPrimaryOutline {
+  @apply text-primaryblue bg-white;
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  border: 1px solid #4914ff;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.btnPrimaryOutline:hover,
+.btnPrimaryOutline:active,
+.btnPrimaryOutline:focus {
+  @apply bg-primaryblue text-white;
+}
+
+.btnPrimarySolid {
+  @apply text-white bg-primaryblue;
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  border: 1px solid #4914ff;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btnPrimarySolid:hover,
+.btnPrimarySolid:active,
+.btnPrimarySolid:focus {
+  @apply bg-white text-primaryblue;
+}
