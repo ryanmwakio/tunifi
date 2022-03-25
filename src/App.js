@@ -12,7 +12,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="shortcut icon" href={logoImg} type="image/x-icon" />
-        <title>tunifi | music that moves</title>
+        <title>tunifi | music that moves you</title>
       </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />

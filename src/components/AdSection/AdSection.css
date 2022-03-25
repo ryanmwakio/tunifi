@@ -64,8 +64,18 @@
 .ad-section-cta-solid {
   @apply bg-white text-primarydarkblue;
 }
+
+.ad-section-cta-solid:hover,
+.ad-section-cta-solid:active {
+  background: rgb(190, 190, 190);
+}
+
 .ad-section-cta-outline {
   @apply bg-transparent text-white;
 
   border: 1px solid #fff;
+}
+.ad-section-cta-outline:hover,
+.ad-section-cta-outline:active {
+  background: rgba(255, 255, 255, 0.247);
 }

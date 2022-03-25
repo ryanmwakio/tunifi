@@ -4,6 +4,7 @@ import SearchNav from "./../SearchNav/SearchNav.component";
 import AdSection from "./../AdSection/AdSection.component";
 import ArtistsSection from "./../ArtistsSection/ArtistsSection.component";
 import RecentSection from "./../RecentSection/RecentSection";
+import Player from "./../Player/Player";
 
 function MiddleColumn() {
   return (
@@ -12,6 +13,8 @@ function MiddleColumn() {
       <AdSection />
       <ArtistsSection />
       <RecentSection />
+      <Player />
+      <div className=" h-5 p-5 bg-transparent"></div>
     </div>
   );
 }

@@ -48,10 +48,23 @@ body {
   font-size: 16px;
   font-family: Inter;
   scroll-behavior: smooth;
+  background: linear-gradient(to bottom right, #fff, #e5e5e5);
 }
 
 .container {
   @apply max-w-screen-2xl;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .container {
+    @apply max-w-screen-2xl;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.hide {
+  display: none;
 }
