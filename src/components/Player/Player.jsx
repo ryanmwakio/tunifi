@@ -24,7 +24,7 @@ function MusicPlayer({ song, imgSrc, auto }) {
   //   duration state
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrenttime] = useState(0);
-  const [showShare, setShowShare] = useState(true);
+  const [showShare, setShowShare] = useState(false);
 
   const audioPlayer = useRef(); //   reference to our audio component
   const progressBar = useRef(); //   reference to our prgressbar

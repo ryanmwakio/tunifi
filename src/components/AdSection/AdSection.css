@@ -48,6 +48,7 @@
 @media (max-width: 600px) {
   .ad-section-wrapper {
     height: 30vh;
+    padding: 1rem .3rem;
   }
   .ad-section-main-title {
     font-size: 1rem;
