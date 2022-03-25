@@ -4,6 +4,12 @@
   border-radius: 8px;
 }
 
+@media (max-width: 800px) {
+  .playlist-section {
+    display: none;
+  }
+}
+
 .playlist-section-title {
   @apply text-primaryblue;
   font-size: 0.7rem;

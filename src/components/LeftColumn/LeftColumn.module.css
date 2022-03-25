@@ -80,6 +80,12 @@
   font-weight: 500;
 }
 
+@media (max-width: 800px) {
+  .links span {
+    display: none;
+  }
+}
+
 .links span:hover,
 .links span:active,
 .links span:focus {

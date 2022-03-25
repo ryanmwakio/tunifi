@@ -109,7 +109,7 @@
   min-width: 30px;
   height: 30px;
   border-radius: 100%;
-  background: rgb(236, 236, 236);
+  background: rgba(236, 236, 236, 0.644);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,21 +247,27 @@
 }
 
 .share {
-  position: absolute;
+  position: fixed;
   bottom: 15%;
-  right: 15%;
-  width: 200px;
-  height: 200px;
+  right: 25%;
+  width: 100px;
+  height: 100px;
   background: #fff;
   padding: 0.3rem;
   box-shadow: -3px 3px 10px rgba(56, 69, 240, 0.4);
   border-radius: 8px;
+  @apply text-primarydarkblue;
+  text-transform: lowercase;
+  font-size: 0.8rem;
 }
 
 .share-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .share-close {

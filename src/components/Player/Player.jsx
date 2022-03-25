@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import "./Player.css";
+import { RWebShare } from "react-web-share";
+
 import {
   FaRegHeart,
   FaHeart,
@@ -27,6 +29,7 @@ function MusicPlayer({ song, imgSrc, auto }) {
   const audioPlayer = useRef(); //   reference to our audio component
   const progressBar = useRef(); //   reference to our prgressbar
   const animationRef = useRef(); //  reference to our animation
+  let shareUrl = "http://ryanmwakio.netlify.app";
 
   useEffect(() => {
     const seconds = Math.floor(audioPlayer.current.duration);
@@ -179,6 +182,16 @@ function MusicPlayer({ song, imgSrc, auto }) {
             <span className="share-close" onClick={handleToggleShare}>
               close
             </span>
+            <RWebShare
+              data={{
+                text: "Like humans, flamingos make friends for life",
+                url: "https://on.natgeo.com/2zHaNup",
+                title: "Flamingos",
+              }}
+              onClick={() => console.log("shared successfully!")}
+            >
+              <button>Share 🔗</button>
+            </RWebShare>
           </div>
         </div>
       )}

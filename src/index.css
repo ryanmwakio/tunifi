@@ -65,6 +65,18 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  .container {
+    @apply max-w-screen-2xl;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
 .hide {
   display: none;
+}
+
+.show {
+  display: block;
 }
