@@ -17,21 +17,71 @@ import {
 import { BsDownload } from "react-icons/bs";
 import img from "../../assets/images/artist-img-play.jpg";
 import mysong from "../../assets/images/Fivio Foreign - Magic City (Official Video) ft. Quavo.mp3";
+import axios from "axios";
+import { Credentials } from "../../utils/credentials";
 
 function MusicPlayer({ song, imgSrc, auto }) {
+  const spotify = Credentials();
+
   const [isLove, setLove] = useState(false);
   const [isPlaying, setPlay] = useState(false);
   //   duration state
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrenttime] = useState(0);
   const [showShare, setShowShare] = useState(false);
+  const [genres, setGenres] = useState([]);
+  const [token, setToken] = useState("");
 
   const audioPlayer = useRef(); //   reference to our audio component
   const progressBar = useRef(); //   reference to our prgressbar
   const animationRef = useRef(); //  reference to our animation
   let shareUrl = "http://ryanmwakio.netlify.app";
 
-  useEffect(() => {
+  // spotify code start
+
+  // spotify code end
+
+  useEffect(async () => {
+    
+    let tokenResponse = await axios("https://accounts.spotify.com/api/token", {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization:
+          "Basic " + btoa(spotify.ClientId + ":" + spotify.ClientSecret),
+      },
+      data: "grant_type=client_credentials",
+      method: "POST",
+    });
+    setToken(tokenResponse.data.access_token.items);
+
+    let genreResponse = await axios(
+      "https://api.spotify.com/v1/browse/categories?locale=sv_US",
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + tokenResponse.data.access_token,
+        },
+      }
+    );
+
+    let artistResponse = await axios(
+      "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + tokenResponse.data.access_token,
+        },
+      }
+    );
+
+    let artistsResponse = await axios("https://api.spotify.com/v1/artists", {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + tokenResponse.data.access_token,
+      },
+    });
+    console.log(artistsResponse.data);
+
     const seconds = Math.floor(audioPlayer.current.duration);
     setDuration(seconds);
 
