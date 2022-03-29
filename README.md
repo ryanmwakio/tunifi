@@ -2,6 +2,10 @@
 
 ![](./cover.png)
 
+#### Figma design can be found here
+
+[figma design](<https://www.figma.com/file/oIIIcuS9LZrSXBDwm0WmU7/Music-Dashboard--Tunifi-(Community)?node-id=0%3A1>)
+
 ## Description:
 
 simple music player frontend connected to the spotify api. The goal was to nicely present exposed spotify api endpoints and organize the data on an organized frontend. For the project, React js was used because of ease of state management with the library and also composing interfaces that are reusable and agile.
