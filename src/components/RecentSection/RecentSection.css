@@ -23,6 +23,7 @@
   position: relative;
   border-radius: 8px;
   margin-right: 2rem;
+  padding: 0.5rem;
 }
 
 .play-icon {
@@ -61,4 +62,15 @@
   font-weight: 600;
   color: #11004d6e;
   padding-right: 0.4rem;
+}
+
+.album-name {
+  @apply text-white;
+  display: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 0.6rem;
+  background: rgba(255, 255, 255, 0.212);
+  padding: 0.7rem;
+  border-radius: 8px;
 }

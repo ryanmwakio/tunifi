@@ -15,10 +15,11 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 import { BsDownload } from "react-icons/bs";
-import img from "../../assets/images/artist-img-play.jpg";
-import mysong from "../../assets/images/Fivio Foreign - Magic City (Official Video) ft. Quavo.mp3";
+import img1 from "../../assets/images/artist-img-play-1.jpg";
+import mysong1 from "../../assets/images/Heart Upon My Sleeve.mp3";
 import axios from "axios";
 import { Credentials } from "../../utils/credentials";
+import { Helmet } from "react-helmet";
 
 function MusicPlayer({ song, imgSrc, auto }) {
   const spotify = Credentials();
@@ -37,12 +38,25 @@ function MusicPlayer({ song, imgSrc, auto }) {
   const animationRef = useRef(); //  reference to our animation
   let shareUrl = "http://ryanmwakio.netlify.app";
 
-  // spotify code start
-
-  // spotify code end
+  let playlist = [
+    {
+      id: 1,
+      image: img1,
+      song: mysong1,
+    },
+    {
+      id: 2,
+      image: img1,
+      song: mysong1,
+    },
+    {
+      id: 3,
+      image: img1,
+      song: mysong1,
+    },
+  ];
 
   useEffect(async () => {
-    
     let tokenResponse = await axios("https://accounts.spotify.com/api/token", {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -73,14 +87,15 @@ function MusicPlayer({ song, imgSrc, auto }) {
         },
       }
     );
-
-    let artistsResponse = await axios("https://api.spotify.com/v1/artists", {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + tokenResponse.data.access_token,
-      },
-    });
-    console.log(artistsResponse.data);
+    let recommendationsResponse = await axios(
+      "https://api.spotify.com/v1/recommendations/available-genre-seeds",
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + tokenResponse.data.access_token,
+        },
+      }
+    );
 
     const seconds = Math.floor(audioPlayer.current.duration);
     setDuration(seconds);
@@ -154,21 +169,20 @@ function MusicPlayer({ song, imgSrc, auto }) {
   const changeSongLove = () => {
     setLove(!isLove);
   };
-
   return (
     <>
       <div className="musicPlayer">
         <div className="songImage">
-          <img src={img} alt="" />
+          <img src={playlist[0].image} alt="" />
         </div>
         <div className="songAttributes">
-          <audio src={mysong} preload="metadata" ref={audioPlayer} />
+          <audio src={playlist[0].song} preload="metadata" ref={audioPlayer} />
 
           <div className="top">
             <div className="left">
-              <i className="download" title="download">
+              <a href={mysong1} download className="download" title="download">
                 <BsDownload />
-              </i>
+              </a>
             </div>
 
             <div className="middle">

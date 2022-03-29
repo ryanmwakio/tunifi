@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RecentSection.css";
 
 import recentImg1 from "../../assets/images/recent-1.jpg";
@@ -9,51 +9,58 @@ import recentImg4 from "../../assets/images/recent-4.jpg";
 import { Link } from "react-router-dom";
 
 import playIcon from "../../assets/icons/play.svg";
+import axios from "axios";
+import { Credentials } from "../../utils/credentials";
 
 function RecentSection() {
-  let recents = [
-    {
-      id: 1,
-      img: recentImg1,
-      song: "Divine",
-      artist: "Kohinoor",
-    },
-    {
-      id: 2,
-      img: recentImg2,
-      song: "Aaya na tu",
-      artist: "Arjun Kanungo, Momina Mustehsan",
-    },
-    {
-      id: 3,
-      img: recentImg3,
-      song: "Into your arms",
-      artist: "Ava max, Witt Lowry",
-    },
-    {
-      id: 4,
-      img: recentImg5,
-      song: "Unstoppable",
-      artist: "Sia",
-    },
-    {
-      id: 5,
-      img: recentImg4,
-      song: "Unstoppable",
-      artist: "Sia",
-    },
-  ];
+  const spotify = Credentials();
+
+  const [token, setToken] = useState("");
+  const [recents, setRecents] = useState([]);
+  // let recents = [
+  //   {
+  //     id: 1,
+  //     img: recentImg1,
+  //     song: "Divine",
+  //     artist: "Kohinoor",
+  //   },
+  // ];
+
+  useEffect(async () => {
+    let tokenResponse = await axios("https://accounts.spotify.com/api/token", {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization:
+          "Basic " + btoa(spotify.ClientId + ":" + spotify.ClientSecret),
+      },
+      data: "grant_type=client_credentials",
+      method: "POST",
+    });
+    setToken(tokenResponse.data.access_token.items);
+
+    let newReleasesResponse = await axios(
+      `https://api.spotify.com/v1/browse/new-releases`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + tokenResponse.data.access_token,
+        },
+      }
+    );
+    setRecents(newReleasesResponse.data.albums.items);
+  }, []);
   return (
     <>
-      <h3 className="recent-section-title">Recent</h3>
+      <h3 className="recent-section-title">New Releases</h3>
       <div className="recent-section-wrapper">
         {recents.map((recent) => {
           return (
             <div key={recent.id}>
               <div
                 className="recent-section-item"
-                style={{ backgroundImage: `url(${recent.img})` }}
+                style={{ backgroundImage: `url(${recent.images[1].url})` }}
               >
+                <p className="album-name">{recent.name}</p>
                 <Link to="/" className="play-icon">
                   <img src={playIcon} alt="" />
                 </Link>

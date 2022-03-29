@@ -190,9 +190,22 @@ function LeftColumn() {
             </Link>
           </li>
         </ul>
-
-        <span className={classes.btnPrimaryOutline}>Twitter</span>
-        <span className={classes.btnPrimarySolid}>Github</span>
+        <a
+          href="https://twitter.com/ryanmwakio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.btnPrimaryOutline}
+        >
+          Twitter
+        </a>
+        <a
+          href="https://github.com/ryanmwakio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.btnPrimarySolid}
+        >
+          Github
+        </a>
       </div>
     </>
   );

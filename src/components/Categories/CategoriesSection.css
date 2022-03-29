@@ -1,0 +1,53 @@
+.recent-section-title {
+  @apply text-primarydarkblue;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.recent-section-wrapper {
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+}
+
+.category-section-item {
+  min-width: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  min-height: 120px;
+  background-image: url(../../assets/images/recent-1.jpg);
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 8px;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.recent-section-song {
+  @apply text-primarydarkblue;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.recent-section-artist {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #11004d6e;
+  padding-right: 0.4rem;
+}
+
+.category-name {
+  @apply text-white;
+  display: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 0.6rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background: #4b14ffaf;
+}

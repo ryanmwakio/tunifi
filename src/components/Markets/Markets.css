@@ -1,0 +1,28 @@
+.markets-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+}
+
+.markets-title {
+  @apply text-primarydarkblue;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.markets-wrapper a {
+  @apply text-primarydarkblue;
+  text-decoration: none;
+  background: rgb(207, 207, 207);
+  display: inline-block;
+  font-size: 0.7rem;
+  margin-right: 2rem;
+  margin-top: 0.8rem;
+  padding: 0.1rem 1rem;
+  border-radius: 15px;
+  box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.05);
+}
