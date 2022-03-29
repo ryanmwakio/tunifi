@@ -19,7 +19,6 @@ import img1 from "../../assets/images/artist-img-play-1.jpg";
 import mysong1 from "../../assets/images/Heart Upon My Sleeve.mp3";
 import axios from "axios";
 import { Credentials } from "../../utils/credentials";
-import { Helmet } from "react-helmet";
 
 function MusicPlayer({ song, imgSrc, auto }) {
   const spotify = Credentials();

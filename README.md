@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Tunifi music player UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](./cover.png)
 
-## Available Scripts
+## Description:
 
-In the project directory, you can run:
+simple music player frontend connected to the spotify api. The goal was to nicely present exposed spotify api endpoints and organize the data on an organized frontend. For the project, React js was used because of ease of state management with the library and also composing interfaces that are reusable and agile.
+Some of the challenges while developing included unavailable data from the various endpoints from the spotify api docs.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation and running the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ### Installation
 
-### `npm test`
+  ```bash
+    clone the project
+    -----------------------------
+    git clone https://github.com/ryanmwakio/tunifi.git
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  then navigate into the project
 
-### `npm run build`
+  ```bash
+    cd tunifi
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  install all node dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+  npm install
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  create a .env file in the root of your project
 
-### `npm run eject`
+  ```bash
+  touch .env
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  navigate into the .env and store the client ID and client secret both required for authorization of requests [https://developer.spotify.com/](https://developer.spotify.com/) more details for getting the id and secret on the spotify api docs.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```bash
+  REACT_APP_CLIENT_ID = your id
+  REACT_APP_CLIENT_SECRET = your secret
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  start the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```bash
+  npm start
+  ```
 
-## Learn More
+## Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. [Ryan Mwakio](https://ryanmwakio.netlify.app)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Licence
 
-### Code Splitting
+MIT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How to contribute to the project
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+contact [ryanmwakio6@gmail.com](ryanmwakio6@gmail.com)
+you can extend functionality on the various navigation components on the left.
