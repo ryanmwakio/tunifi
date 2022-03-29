@@ -8,7 +8,7 @@
 
 ## Description:
 
-simple music player frontend connected to the spotify api. The goal was to nicely present exposed spotify api endpoints and organize the data on an organized frontend. For the project, React js was used because of ease of state management with the library and also composing interfaces that are reusable and agile.
+simple music player frontend connected to the spotify api. The goal was to nicely present exposed spotify api endpoints and organize the data on an attractive frontend. For the project, React js was used because of ease of state management with the library and also composing interfaces that are reusable and agile.
 Some of the challenges while developing included unavailable data from the various endpoints from the spotify api docs.
 
 ---
